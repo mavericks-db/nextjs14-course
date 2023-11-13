@@ -4,13 +4,13 @@
 
 
 export async function generateMetadata({ params}: any) {
-    // const res = await fetch(`deployedbackendlink/api/blogs/${params.blogId}`)
-    const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    const res = await fetch(`http://localhost:3000/api/blogs/${params.blogId}`)
+    // const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
     const data = await res.json()
     console.log(data)
     return {
         title: data.title,
-        description: data.title
+        description: data.description
     }
 }
 
