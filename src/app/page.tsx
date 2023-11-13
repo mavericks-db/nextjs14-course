@@ -1,6 +1,7 @@
 'use client';
 
 import Header from '@/components/Header';
+import { useAppContext } from '@/context';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
@@ -44,6 +45,8 @@ export default function Home() {
     fetchAPI();
   };
 
+  const { nameContext, setName } = useAppContext();
+
   return (
     <>
       <Header name={name} age={32} isMan={true}>
@@ -56,8 +59,11 @@ export default function Home() {
         height={500}
         alt='my placeholder'
       />
-
       <button onClick={handleClick}>Call my API</button>
+      <br />
+      <span>{nameContext}</span>
+      <br />
+      <button onClick={() => setName('Lorem')}>Change Name</button>
     </>
   );
 }
