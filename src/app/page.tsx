@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import Image from 'next/image'
 
 export default function Home() {
   const name = "Mavericks"
@@ -10,6 +11,7 @@ export default function Home() {
     <main>
       Main page of my application
     </main>
+    <Image src={'/sample.jpg'} width={500} height={500} alt='my placeholder'/>
     </>
   )
 }
