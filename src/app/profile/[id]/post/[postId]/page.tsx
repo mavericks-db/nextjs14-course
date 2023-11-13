@@ -1,14 +1,14 @@
-'use client'
+'use client';
 
-import { useParams } from "next/navigation"
+import { useParams } from 'next/navigation';
 
 export default function ProfileIDPostsID() {
-    const params = useParams()
-    console.log(params.postId)
+  const params = useParams();
+  console.log(params.postId);
 
-    return (
-        <>
-        <div>My Profile ID Posts ID</div>
-        </>
-    )
-};
+  return (
+    <>
+      <div>My Profile ID Posts ID</div>
+    </>
+  );
+}

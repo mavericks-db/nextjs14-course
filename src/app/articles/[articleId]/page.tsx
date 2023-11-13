@@ -1,4 +1,3 @@
-
 // server component
 // export default function ArticleId({ params, searchParams}: any) {
 //     return (
@@ -9,22 +8,22 @@
 //     )
 // }
 
-'use client'
+'use client';
 
-import { useParams, useSearchParams } from "next/navigation"
+import { useParams, useSearchParams } from 'next/navigation';
 
 export default function ArticleId() {
-    const params = useParams();
-    const searchParams = useSearchParams()
-    console.log(params)
-    console.log(searchParams)
+  const params = useParams();
+  const searchParams = useSearchParams();
+  console.log(params);
+  console.log(searchParams);
 
-    const myquery = searchParams.get('new')
+  const myquery = searchParams.get('new');
 
-    return (
-         <>
-        <h1>Article {params.articleId}</h1>
-        <h1>Article {myquery}</h1>
-        </>
-    )
-};
+  return (
+    <>
+      <h1>Article {params.articleId}</h1>
+      <h1>Article {myquery}</h1>
+    </>
+  );
+}

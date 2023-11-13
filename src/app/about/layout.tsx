@@ -1,14 +1,16 @@
-import '../about.css'
+import '../about.css';
 
-export default function AboutLayout({ children}: {
-    children: React.ReactNode;
+export default function AboutLayout({
+  children,
+}: {
+  children: React.ReactNode;
 }) {
-    return (
-        <html>
-        <body>
-            <header>This is my about header</header>
-            {children}
-        </body>
-        </html>
-    )
+  return (
+    <html>
+      <body>
+        <header>This is my about header</header>
+        {children}
+      </body>
+    </html>
+  );
 }
